@@ -126,8 +126,19 @@ body {
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
+
   text-decoration: none;
   color: var(--third-text-color);
+}
+
+.contacts-link .contacts-icon {
+  fill: currentColor;
+}
+
+.contacts-link span {
+  margin-left: 10px;
 }
 
 .current-page {
@@ -143,8 +154,6 @@ body {
 
 /* Hero */
 .hero-section {
-  outline: 2px solid tomato;
-
   display: flex;
   height: 600px;
   max-width: 1600px;
@@ -213,12 +222,28 @@ body {
   list-style: none;
 }
 
+.features-item > div {
+}
+
 .features-item {
   width: 270px;
 }
 
 .features-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.thumb-icon {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+
+  background-color: var(--fourth-background-color);
+  border-radius: 4px;
+}
+
+.features-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .features-secondary-title {
@@ -284,7 +309,9 @@ body {
 }
 
 .team-member {
-  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
   border-color: transparent;
   border: 0px;
 
@@ -311,7 +338,7 @@ body {
 }
 
 .team-position {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.19;
@@ -319,6 +346,74 @@ body {
   color: var(--third-text-color);
 }
 
+.member-social {
+  margin: 0px 32px 30px 32px;
+}
+
+.team-member .icon-box a {
+  color: rgba(175, 177, 184, 1);
+}
+
+.team-member .icon-box a:hover {
+  color: var(--second-text-color);
+}
+
+.team-member .link-icon {
+  fill: currentColor;
+}
+
+/* Clients */
+.clients-section {
+  padding: 94px 0;
+}
+
+.clients-list {
+  display: flex;
+}
+.clients-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 50px;
+}
+
+.clients-item {
+  list-style: none;
+  width: 170px;
+  height: 92px;
+}
+
+.clients-item > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  text-decoration: none;
+  color: rgba(175, 177, 184, 1);
+}
+
+.clients-item > a:hover {
+  color: var(--third-background-color);
+  border-color: var(--third-background-color);
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
 /* Footer */
 .footer-section {
   height: 252px;
@@ -326,6 +421,17 @@ body {
 
   background-color: var(--secondary-background-color);
 }
+
+.footer-section > .container {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-box {
+  display: flex;
+  flex-direction: column;
+}
+
 .address-link {
   text-decoration: none;
   font-style: normal;
@@ -353,6 +459,66 @@ body {
 .address-link-address:hover,
 .address-link-address:focus {
   color: var(--fourth-text-color);
+}
+
+.social {
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.join {
+  display: flex;
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--second-text-color);
+}
+
+.social-list {
+  display: flex;
+
+  list-style: none;
+}
+
+.social-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-box:not(:last-child) {
+  margin-right: 10px;
+}
+
+.link-icon {
+  width: 20px;
+  height: 20px;
+  object-position: 50% 50%;
+  fill: currentColor;
+}
+
+.social-list a:hover {
+  background-color: var(--third-background-color);
 }
 
 /* Page - portfolio */
@@ -401,6 +567,8 @@ body {
 .portfolio-button:focus {
   background-color: var(--third-background-color);
   color: var(--second-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Portfolio */
@@ -422,10 +590,16 @@ body {
 }
 
 .portfolio-list a {
+  display: block;
   text-decoration: none;
   font-family: inherit;
   color: inherit;
   letter-spacing: inherit;
+}
+
+.portfolio-list a:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-info {
