@@ -383,12 +383,12 @@ gap: var(--grid-gap);
 
 .footer-container {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
+    gap: 120px;
 }
 
 .footer-left-side {
     max-width: 264px;
-    margin-right: 120px;
 }
 
 .footer-logo {
