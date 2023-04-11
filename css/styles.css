@@ -400,6 +400,7 @@ gap: var(--grid-gap);
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 16px;
+    color: var(--hero-text-color);
 }
 
 .footer-social-list {
