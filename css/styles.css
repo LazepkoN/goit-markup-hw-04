@@ -454,6 +454,7 @@ fill: var(--link-hover-color);
 
 .portfolio-link {
     display: block;
+    border: 1px solid #E7E9FC;
 }
 
 .portfolio-link:hover,
