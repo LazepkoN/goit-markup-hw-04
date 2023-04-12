@@ -333,8 +333,7 @@ gap: var(--grid-gap);
 }
 
 .social-list-icon {
-    width: 16px;
-    height: 16px;
+
     fill: #F4F4FD;
 }
 
@@ -411,6 +410,7 @@ gap: var(--grid-gap);
 .footer-social-list-link:focus {
     background-color: var(--footer-social-hover);
 }
+
 
 /* ========== Portfolio page ========== */
 /* ==========                ========== */
